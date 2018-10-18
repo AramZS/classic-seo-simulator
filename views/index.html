@@ -1,0 +1,78 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Classic SEO Simulator</title>
+    <meta name="description" content="Simulate creating old-style SEO metadata">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        Classic SEO Simulator
+      </h1>
+    </header>
+
+    <main>
+      <p class="bold">Oh hi,</p>
+      
+      <p>Create an SEO title and description for yourself and see how it does:</p>
+      <p>
+        Use `#` to indicate a term you think is a key word or term. If it has multiple words in a term, use dashes instead of spaces, like `Aram-Zucker-Scharff`
+      </p>
+      <form>
+        <input name="seo-title" id="seo-title" type="text" maxlength="60" placeholder="My name is" aria-labelledby="seo-title">
+        <textarea name="seo-description" cols="60" rows="5" id="seo-description" type="text" maxlength="160" placeholder="What I do is" aria-labelledby="seo-description">What I do is</textarea>
+        <button type="submit" id="submit-seo">Submit SEO for review</button>
+      </form>
+      
+      <section class="result">
+        <h3>
+          Results:
+        </h3>
+        <h3 id="score-title">
+          Score: <span id="score">0</span>
+        </h3>
+        <span id="tweetStatus"></span>
+        <pre><code id="code"><xmp id="inside-code">
+          <title>My name is</title>
+          <meta name="description" content="What I do is" />
+        </xmp></code></pre>
+        <span id="result"></span>
+        <h4>
+          Terms Popularity over This Year:
+        </h4>
+        <ul id="termlist">
+          
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      Made with <a href="https://glitch.com">Glitch</a>!
+    </footer>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+
+  </body>
+</html>
